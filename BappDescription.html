@@ -1,3 +1,13 @@
-<p>This extension automatically takes care of anti-CSRF tokens by fetching them from the referer and replacing them in requests.</p>
-<p>To use this extension, install it and create a Session handling rule invoking it under Project options > Sessions (with the right tool and URL scopes).</p>
+<p>Working</p>
+<p>The extension works by registering a new session handling rule called &quot;Anti-CSRF token from referer&quot;. 
+    This handler inspects all the requests and searches for the anti-CSRF token parameter (in GET, POST, JSON and multipart requests) determine$
+<p>Once this parameter is found, a GET request is issued to the referer of the original request. In this request, all the headers are copied from the original request (e.g Cookie, Authorization...).</p>
+<p>This response is then parsed and the substring between the start and the end markers configured in the tab is extracted as the anti-CSRF token.</p>
+<p>Finally, the anti-CSRF token is replaced in the original request.</p>
+<p>Usage</p>
+<ol>
+        <li>Create a new session handling rule (Invoke a Burp extension > Anti-CSRF token from referer)</li>
+        <li>Define session scope</li>
+        <li>Configure parameters in Anti-CSRF token from referer tab</li>
+</ol>
 <p>For further information, consult the documentation on <a href="https://github.com/CompassSecurity/anti-csrf-token-from-referer/blob/master/README.md">https://github.com/CompassSecurity/anti-csrf-token-from-referer/blob/master/README.md</a></p>

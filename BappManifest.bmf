@@ -3,7 +3,7 @@ ExtensionType: 2
 Name: Anti-CSRF Token From Referer
 RepoName: anti-csrf-token-from-referer
 ScreenVersion: 0.1
-SerialVersion: 3
+SerialVersion: 5
 MinPlatformVersion: 0
 ProOnly: False
 Author: Compass Security
