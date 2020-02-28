@@ -1,0 +1,12 @@
+Uuid: 8eead913e28549f3aad177303c36e6e5
+ExtensionType: 2
+Name: Anti-CSRF Token From Referer
+RepoName: anti-csrf-token-from-referer
+ScreenVersion: 0.1
+SerialVersion: 3
+MinPlatformVersion: 0
+ProOnly: False
+Author: Compass Security
+ShortDescription: Automatically takes care of anti-CSRF tokens by fetching them from the referer and replacing them in requests.
+EntryPoint: Anti-CSRF_token_from_referer.py
+BuildCommand: 
